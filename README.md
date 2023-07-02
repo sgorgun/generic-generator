@@ -25,7 +25,6 @@ Your task is to design and implement a framework for generating sequences in a f
 - Create a constructor for `FibonacciSequenceGenerator` that takes in the initial previous and current values.
 
 Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works. However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the GetNext() method to generate different types of sequences e.g.  
-
-    $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where T - integer    
-    $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where T - double 
+   $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where T - integer    
+   $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where T - double
 etc.
