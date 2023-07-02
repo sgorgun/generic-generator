@@ -29,3 +29,5 @@ Your task is to complete the implementation of the `FibonacciSequenceGenerator` 
    data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }      
    $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where T - double.    
    data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137}
+
+- Add new test methods to test the functionality of new generator-classes.
