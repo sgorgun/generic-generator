@@ -43,8 +43,8 @@ Data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.703898344
 
 ### 7. Unit testing
 
-Add new test methods to test the functionality of all new generator-classes.
+Add new unit test methods to verify the functionality of all new generator-classes.
 
 ### 8. *How it works
 
-Using all developed classed add unit tests to demonstrate polymorphic behavior on interface and abstract class.
+Add unit tests (or console application) to demonstrate polymorphic behavior developed types.
