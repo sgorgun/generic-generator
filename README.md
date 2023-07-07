@@ -24,27 +24,26 @@ Your task is to design and implement a framework for generating sequences in a f
 - Implement the `GetNext()` method to generate the next Fibonacci number based on the previous and current values. The Fibonacci sequence starts with two initial values (e.g., 0 and 1), and each subsequent number is the sum of the previous two.
 - Create a constructor for `FibonacciSequenceGenerator` that takes in the initial previous and current values.
 
-### 4. How it works
 Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works (see unit tests). 
 
 However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the `GetNext()` method to generate different types of sequences, e.g.  
 
-### 5. Second Sequence Generator Implementation: `SecondSequenceGenerator` class
+### 4. Second Sequence Generator Implementation: `SecondSequenceGenerator` class
    
    $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where `T` - `integer`;       
 
 Data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }, ,` n = 10`      
 
-### 6. Thirs Sequence Generator Implementation: `ThirdSequenceGenerator` class
+### 5. Thirs Sequence Generator Implementation: `ThirdSequenceGenerator` class
    
    $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where `T` - `double`.    
 
 Data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137},` n = 10`
 
-### 7. Unit testing
+### 6. Unit testing
 
 Add new unit test methods to verify the functionality of all new generator-classes.
 
-### 8. *How it works
+### 7. *How it works
 
 Add unit tests (or console application) to demonstrate polymorphic behavior developed types.
