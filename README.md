@@ -18,23 +18,22 @@ Your task is to design and implement a framework for generating sequences in a f
 - Define a public property `Count` of type int, representing the number of elements generated in the sequence. The property should have a public getter and a private setter.
 - Define an abstract method called `GetNext()` that returns an element of type `T` of the specific sequence.
 
-### 3. Sequence Generator Implementation: FibonacciSequenceGenerator
+### 3. First Sequence Generator Implementation: FibonacciSequenceGenerator
 
 - Create a class called `FibonacciSequenceGenerator` that inherits from `SequenceGenerator<int>`.
 - Implement the `GetNext()` method to generate the next Fibonacci number based on the previous and current values. The Fibonacci sequence starts with two initial values (e.g., 0 and 1), and each subsequent number is the sum of the previous two.
 - Create a constructor for `FibonacciSequenceGenerator` that takes in the initial previous and current values.
 
-### 4. Second Generator Implementation
 Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works. However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the GetNext() method to generate different types of sequences, e.g.  
 
-### 5. Second Generator Implementation
+### 4. Second Sequence Generator Implementation
    $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where T - integer;       
    data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }      
 
-### 6. Second Generator Implementation
+### 6. Thirs Sequence Generator Implementation
    $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where T - double.    
    data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137}
 
 ### 7. Unit testing
 
-Add new test methods to test the functionality of new generator-classes.
+Add new test methods to test the functionality of all new generator-classes.
