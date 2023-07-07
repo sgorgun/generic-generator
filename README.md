@@ -26,7 +26,7 @@ Your task is to design and implement a framework for generating sequences in a f
 
 Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works (see unit tests). 
 
-However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the `GetNext()` method to generate different types of sequences, e.g.  
+However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the `GetNext()` method to generate different types of following sequences.  
 
 ### 4. Second Sequence Generator Implementation: `SecondSequenceGenerator` class
    
