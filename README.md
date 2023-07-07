@@ -6,9 +6,9 @@ Your task is to design and implement a framework for generating sequences in a f
 
 - Create a generic interface called `ISequenceGenerator<T>`.
 - Define the following properties:
-    - Previous of type `T`, representing the previous element in the sequence.
-    - Current of type `T`, representing the current element in the sequence.
-    - Next of type `T`, representing the next element in the sequence.
+    - `Previous` of type `T`, representing the previous element in the sequence.
+    - `Current` of type `T`, representing the current element in the sequence.
+    - `Next` of type `T`, representing the next element in the sequence.
 
 ### 2. Abstract Class: SequenceGenerator<T>
 
