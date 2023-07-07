@@ -2,7 +2,7 @@
 
 Your task is to design and implement a framework for generating sequences in a flexible and reusable manner. To achieve this, you will create an `interface`, an `abstract class`, and a `specific` sequence generator implementations.
 
-### 1. Interface: ISequenceGenerator<T>
+### 1. Sequence Generator Interface: ISequenceGenerator<T>
 
 - Create a generic interface called `ISequenceGenerator<T>`.
 - Define the following properties:
@@ -10,7 +10,7 @@ Your task is to design and implement a framework for generating sequences in a f
     - `Current` of type `T`, representing the current element in the sequence.
     - `Next` of type `T`, representing the next element in the sequence.
 
-### 2. Abstract Class: SequenceGenerator<T>
+### 2. Sequence Generator Abstract Class: SequenceGenerator<T>
 
 - Create an abstract class called `SequenceGenerator<T>` that implements the `ISequenceGenerator<T>` interface.
 - Provide a constructor that takes in initial values for `Previous` and `Current`. Inside the constructor, set the initial values and initialize any necessary variables.
@@ -28,13 +28,13 @@ Your task is to complete the implementation of the `FibonacciSequenceGenerator` 
 
 ### 4. Second Sequence Generator Implementation
    
-   $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where T - integer;       
+   $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$ where `T` - `integer`;       
 
 Data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }, ,` n = 10`      
 
 ### 5. Thirs Sequence Generator Implementation
    
-   $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where T - double.    
+   $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$ where `T` - `double`.    
 
 Data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137},` n = 10`
 
