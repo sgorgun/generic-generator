@@ -24,7 +24,9 @@ Your task is to design and implement a framework for generating sequences in a f
 - Implement the `GetNext()` method to generate the next Fibonacci number based on the previous and current values. The Fibonacci sequence starts with two initial values (e.g., 0 and 1), and each subsequent number is the sum of the previous two.
 - Create a constructor for `FibonacciSequenceGenerator` that takes in the initial previous and current values.
 
-Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works. However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the GetNext() method to generate different types of sequences, e.g.  
+Your task is to complete the implementation of the `FibonacciSequenceGenerator` class and use it as an example to understand how the framework works. 
+
+However, you should also extend the framework by creating additional sequence generator classes by inheriting from `SequenceGenerator<T>` and overriding the `GetNext()` method to generate different types of sequences, e.g.  
 
 ### 4. Second Sequence Generator Implementation
    
