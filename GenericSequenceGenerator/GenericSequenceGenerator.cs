@@ -1,87 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace GenericSequenceGenerator;
-public interface ISequenceGenerator<out T>
+namespace GenericSequenceGenerator
 {
-    T Previous { get; }
-    T Current { get; }
-    T Next { get; }
-}
-
-public abstract class SequenceGenerator<T> : ISequenceGenerator<T>
-{
-    protected T previous;
-    protected T current;
-
-    public T Previous => previous;
-    public T Current => current;
-    public T Next
+    public interface ISequenceGenerator<out T>
     {
-        get => GetNext();
-        set => throw new NotImplementedException();
-    }
-    public int Count { get; set; }
-
-    protected SequenceGenerator(T previous, T current)
-    {
-        this.previous = previous;
-        this.current = current;
-        Count = 2;
+        T Previous { get; }
+        T Current { get; }
+        T Next { get; }
     }
 
-    public abstract T GetNext();
-}
-
-public class FibonacciSequenceGenerator : SequenceGenerator<int>
-{
-    public FibonacciSequenceGenerator(int previous, int current) : base(previous, current)
+    public abstract class SequenceGenerator<T> : ISequenceGenerator<T>
     {
+        private T previous;
+        private T current;
+        private int count;
+
+        public T Previous => previous;
+        public T Current => current;
+        public abstract T Next { get; }
+        public int Count => count;
+
+        protected SequenceGenerator(T previous, T current)
+        {
+            this.previous = previous;
+            this.current = current;
+            count = 2;
+        }
+
+        protected T UpdateValues(T next)
+        {
+            previous = current;
+            current = next;
+            count++;
+            return next;
+        }
     }
 
-
-    public override int GetNext()
+    public class FibonacciSequenceGenerator : SequenceGenerator<int>
     {
-        int next = previous + current;
-        previous = current;
-        current = next;
-        Count++;
-        return next;
-    }
-}
+        public FibonacciSequenceGenerator(int previous, int current) : base(previous, current)
+        {
+        }
 
-public class SecondSequenceGenerator : SequenceGenerator<int>
-{
-    public SecondSequenceGenerator(int previous, int current) : base(previous, current)
-    {
+        public override int Next => UpdateValues(Previous + Current);
     }
 
-    public override int GetNext()
+    public class SecondSequenceGenerator : SequenceGenerator<int>
     {
-        var next = 6 * current - 8 * previous;
-        previous = current;
-        current = next;
-        Count++;
-        return next;
-    }   
-}
+        public SecondSequenceGenerator(int previous, int current) : base(previous, current)
+        {
+        }
 
-public class ThirdSequenceGenerator : SequenceGenerator<double>
-{
-    public ThirdSequenceGenerator(double previous, double current) : base(previous, current)
-    {
+        public override int Next => UpdateValues(6 * Current - 8 * Previous);
     }
 
-    public override double GetNext()
+    public class ThirdSequenceGenerator : SequenceGenerator<double>
     {
-        var next = current + previous / current;
-        previous = current;
-        current = next;
-        Count++;
-        return next;
+        public ThirdSequenceGenerator(double previous, double current) : base(previous, current)
+        {
+        }
+
+        public override double Next => UpdateValues(Current + Previous / Current);
     }
 }
